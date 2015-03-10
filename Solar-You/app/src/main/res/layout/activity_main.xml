@@ -1,0 +1,183 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/stars"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <!-- TextView to view result. User imm. knows when opening app it is for calculating -->
+    <TextView
+        style="@style/NormalText"
+        android:textSize="30sp"
+        android:text="@string/title"/>
+
+    <LinearLayout
+        style="@style/HorizontalLinearLayout">
+
+        <TextView
+            style="@style/NormalText"
+            android:text="@string/enter_age"/>
+
+        <EditText
+            android:id="@+id/user_age"
+            android:textSize="@dimen/activity_text_size"
+            android:textColor="#FFFFFF"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="4"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/HorizontalLinearLayout">
+
+        <Button
+            style="@style/CalculateButtons"
+            android:id="@+id/calculate_button"
+            android:text="@string/calculate"
+            android:onClick="onClick"/>
+
+        <Button
+            style="@style/CalculateButtons"
+            android:id="@+id/lucky_button"
+            android:text="@string/lucky"
+            android:onClick="onLucky"/>
+
+    </LinearLayout>
+
+    <!-- LinearLayout to place buttons that represent planets in our Solar System -->
+    <LinearLayout
+        style="@style/HorizontalLinearLayout"
+        android:weightSum="2">
+
+        <TextView
+            style="@style/Planet"
+            android:drawableTop="@drawable/mercury"
+            android:text="@string/mercury"/>
+
+        <TextView
+            style="@style/PlanetTextView"
+            android:id="@+id/mercury"/>
+
+        <TextView
+            style="@style/PlanetYearsLayout"
+            android:text="Mercurian years"/>
+
+        <TextView
+            style="@style/Planet"
+            android:drawableTop="@drawable/venus"
+            android:text="@string/venus"/>
+
+        <TextView
+            style="@style/PlanetTextView"
+            android:id="@+id/venus"/>
+
+        <TextView
+            style="@style/PlanetYearsLayout"
+            android:text="Venusian years"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/HorizontalLinearLayout"
+        android:layout_gravity="left">
+
+        <TextView
+            style="@style/Planet"
+            android:drawableTop="@drawable/earth"
+            android:text="@string/earth"/>
+
+        <TextView
+            style="@style/PlanetTextView"
+            android:id="@+id/earth"/>
+
+        <TextView
+            style="@style/PlanetYearsLayout"
+            android:text="Earth years"/>
+
+        <TextView
+            style="@style/Planet"
+            android:drawableTop="@drawable/mars"
+            android:text="@string/mars"/>
+
+        <TextView
+            style="@style/PlanetTextView"
+            android:id="@+id/mars"/>
+
+        <TextView
+            style="@style/PlanetYearsLayout"
+            android:text="Martian years"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/HorizontalLinearLayout"
+        android:layout_gravity="left">
+
+        <TextView
+            style="@style/Planet"
+            android:drawableTop="@drawable/jupiter"
+            android:text="@string/jupiter"/>
+
+        <TextView
+            style="@style/PlanetTextView"
+            android:id="@+id/jupiter"/>
+
+        <TextView
+            style="@style/PlanetYearsLayout"
+            android:text="Jovian years"/>
+
+        <TextView
+            style="@style/Planet"
+            android:drawableTop="@drawable/saturn"
+            android:text="@string/saturn"/>
+
+        <TextView
+            style="@style/PlanetTextView"
+            android:id="@+id/saturn"/>
+
+        <TextView
+            style="@style/PlanetYearsLayout"
+            android:text="Saturnian years"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/HorizontalLinearLayout"
+        android:layout_gravity="left">
+
+        <TextView
+            style="@style/Planet"
+            android:drawableTop="@drawable/uranus"
+            android:text="@string/uranus"/>
+
+        <TextView
+            style="@style/PlanetTextView"
+            android:id="@+id/uranus"/>
+
+        <TextView
+            style="@style/PlanetYearsLayout"
+            android:text="Uranian years"/>
+
+        <TextView
+            style="@style/Planet"
+            android:drawableTop="@drawable/neptune"
+            android:text="@string/neptune"/>
+
+        <TextView
+            style="@style/PlanetTextView"
+            android:id="@+id/neptune"/>
+
+        <TextView
+            style="@style/PlanetYearsLayout"
+            android:text="Neptunian years"/>
+
+    </LinearLayout>
+
+</LinearLayout>

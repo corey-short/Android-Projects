@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/FlickrTest/app/libs/slf4j.jar!/" />
+      <root url="jar://$PROJECT_DIR$/FlickrTest/app/libs/flickrj.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

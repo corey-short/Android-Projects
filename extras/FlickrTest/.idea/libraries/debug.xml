@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="debug">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/FlickrTest/app/build/intermediates/pre-dexed/debug/flickrj-a34234145946614cf41973f3fa50716233d7a246.jar!/" />
+      <root url="jar://$PROJECT_DIR$/FlickrTest/app/build/intermediates/pre-dexed/debug/slf4j-a9bd179f76990f920f1a9dd4da8bf74253833059.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
