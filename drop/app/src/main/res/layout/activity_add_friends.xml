@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="drop.drop.AddFriends"
+    android:id="@+id/add_friends_layout" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/pink_accent"
+        android:text="Friends who added me on Drop"
+        android:paddingTop="50dp"
+        android:layout_margin="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_alignParentTop="true" />
+
+    <ListView
+        android:id="@+id/add_friends_listview"
+        android:dividerHeight="1dp"
+        android:divider="@color/blue_accent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingTop="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <RelativeLayout
+        android:id="@+id/add_friends_top_bar"
+        style="@style/TopBar"
+        android:background="@color/blue_accent">
+
+        <ImageButton
+            android:id="@+id/add_friends_back_arrow"
+            android:src="@drawable/back_arrow"
+            style="@style/TobBarImageButtons"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="closeActivity"/>
+
+        <ImageView
+            android:id="@+id/friends_logo"
+            style="@style/TobBarLogo"
+            android:src="@drawable/drop_logo" />
+
+        <ImageButton
+            android:id="@+id/add_friends_search_button"
+            android:src="@drawable/search_icon"
+            style="@style/TobBarImageButtons"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

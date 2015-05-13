@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Short\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.2.2\285cb9c666f0f0f3dd8a1be04e1f457eb7b15113\jackson-annotations-2.2.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="285cb9c666f0f0f3dd8a1be04e1f457eb7b15113">
+        <dex dex="C:\Users\Short\Desktop\repo\Android-Projects\drop\app\build\intermediates\pre-dexed\debug\jackson-annotations-2.2.2-ca530c74dd381da2ea6906a8de102d6500ded6e5.jar" />
+    </item>
+    <item
+        jar="C:\Users\Short\.gradle\caches\modules-2\files-2.1\com.firebase\tubesock\0.0.10\ddce2c65136c1de8000f8932d8b7ab16d5d336b9\tubesock-0.0.10.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ddce2c65136c1de8000f8932d8b7ab16d5d336b9">
+        <dex dex="C:\Users\Short\Desktop\repo\Android-Projects\drop\app\build\intermediates\pre-dexed\debug\tubesock-0.0.10-c3d6f8a79befe48ebdcc8daaf9662bc4801605bd.jar" />
+    </item>
+    <item
+        jar="C:\Users\Short\.gradle\caches\modules-2\files-2.1\com.firebase\firebase-client-jvm\2.0.1\bd6936fbb77b20b7a4deec0126a41cfbbc1a3a3a\firebase-client-jvm-2.0.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="bd6936fbb77b20b7a4deec0126a41cfbbc1a3a3a">
+        <dex dex="C:\Users\Short\Desktop\repo\Android-Projects\drop\app\build\intermediates\pre-dexed\debug\firebase-client-jvm-2.0.1-058c160567bd1aa0e87ed0a91a6dfe18642b53a5.jar" />
+    </item>
+    <item
+        jar="C:\Users\Short\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.2.2\3c8f6018eaa72d43b261181e801e6f8676c16ef6\jackson-databind-2.2.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6">
+        <dex dex="C:\Users\Short\Desktop\repo\Android-Projects\drop\app\build\intermediates\pre-dexed\debug\jackson-databind-2.2.2-054c3096e629519e7c37eec9114b658f9d0d07de.jar" />
+    </item>
+    <item
+        jar="C:\Users\Short\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\20.0.0\support-annotations-20.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa">
+        <dex dex="C:\Users\Short\Desktop\repo\Android-Projects\drop\app\build\intermediates\pre-dexed\debug\support-annotations-20.0.0-d09df225f809eb31d1662941fbb5ac1b500530f0.jar" />
+    </item>
+    <item
+        jar="C:\Users\Short\Desktop\repo\Android-Projects\drop\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.1.71\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0f6d5c1ef2e982c3b7858408e3df389cf5d202da">
+        <dex dex="C:\Users\Short\Desktop\repo\Android-Projects\drop\app\build\intermediates\pre-dexed\debug\classes-f9d438a76b78c478793a5f632624a96d31194a03.jar" />
+    </item>
+    <item
+        jar="C:\Users\Short\.gradle\caches\modules-2\files-2.1\com.firebase\firebase-client-android\2.0.1\331e3a0a95687addb3d977b01d50d4e7242b9ca8\firebase-client-android-2.0.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="331e3a0a95687addb3d977b01d50d4e7242b9ca8">
+        <dex dex="C:\Users\Short\Desktop\repo\Android-Projects\drop\app\build\intermediates\pre-dexed\debug\firebase-client-android-2.0.1-21e20756ad1d60b05aae8702ecdaeb0204f1479b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Short\Desktop\repo\Android-Projects\drop\app\libs\metadata-extractor-2.7.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8fd8955b0fc30e62ecdc250f7d8471d2cd42fd46">
+        <dex dex="C:\Users\Short\Desktop\repo\Android-Projects\drop\app\build\intermediates\pre-dexed\debug\metadata-extractor-2.7.0-8f4d013386d15bcaa81eee3c05f1a927db085ea3.jar" />
+    </item>
+    <item
+        jar="C:\Users\Short\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.2.2\d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b\jackson-core-2.2.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b">
+        <dex dex="C:\Users\Short\Desktop\repo\Android-Projects\drop\app\build\intermediates\pre-dexed\debug\jackson-core-2.2.2-fb834f70d146bea64cb7513bb292f18f3a9b4cd3.jar" />
+    </item>
+    <item
+        jar="C:\Users\Short\Desktop\repo\Android-Projects\drop\app\libs\android-toq-api-1.5.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="33b06af4f6ee27952eee84fe82ed15d8f603d4b7">
+        <dex dex="C:\Users\Short\Desktop\repo\Android-Projects\drop\app\build\intermediates\pre-dexed\debug\android-toq-api-1.5.2-3d2159b0133e92f0bfe6703b2e6735248c3ee17d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Short\Desktop\repo\Android-Projects\drop\app\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8694693636ab36910c8100ce527c258ff3ebece0">
+        <dex dex="C:\Users\Short\Desktop\repo\Android-Projects\drop\app\build\intermediates\pre-dexed\debug\classes-90d00ac0746babc95aa7d9bb1b9500b29b4cdd21.jar" />
+    </item>
+    <item
+        jar="C:\Users\Short\Desktop\repo\Android-Projects\drop\app\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\libs\internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d">
+        <dex dex="C:\Users\Short\Desktop\repo\Android-Projects\drop\app\build\intermediates\pre-dexed\debug\internal_impl-20.0.0-ff1d7dbc61cb46401bddca766616cb3de79aeaa6.jar" />
+    </item>
+
+</items>

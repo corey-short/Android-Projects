@@ -1,0 +1,150 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/top_layout">
+
+    <SurfaceView android:id="@+id/surface_camera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:onClick="cameraPressed"/>
+
+    <ImageView
+        android:id="@+id/photo"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"/>
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:name="com.google.android.gms.maps.MapFragment"/>
+
+
+    <!--<ImageButton-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/drop_button"-->
+        <!--android:background="@null"-->
+        <!--android:layout_margin="10dp"-->
+        <!--android:id="@+id/publish_button"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:onClick="postDropPressed"/>-->
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        style="@style/TopBar">
+
+        <ImageButton
+            android:id="@+id/friends_button"
+            android:src="@drawable/friends_icon"
+            style="@style/TobBarImageButtons"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="launchFriendsActivity"/>
+
+        <ImageView
+            android:id="@+id/logo"
+            style="@style/TobBarLogo"
+            android:src="@drawable/drop_logo" />
+
+        <ImageButton
+            android:id="@+id/drops_button"
+            android:src="@drawable/collected_drops_icon"
+            style="@style/TobBarImageButtons"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="collectedDropsPressed"/>
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/flash_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:src="@drawable/flash_off_icon"
+        android:padding="10dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@id/map"/>
+
+    <Switch
+        android:id="@+id/public_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:thumbTextPadding="0dp"
+        android:padding="0dp"
+        android:switchMinWidth="0dp"
+        android:textOff=""
+        android:textOn=""
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/map"
+        android:layout_marginBottom="7dp"
+        android:thumb="@drawable/switch_bg"
+        android:track="@drawable/track_bg"/>
+
+    <!-- Wont be using an image view, been replaced with switch above.
+    <ImageView
+        android:id="@+id/toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/toggle_public"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"/
+        android:layout_above="@id/map"/>
+        -->
+
+    <ImageButton
+        android:id="@+id/flip_camera_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:src="@drawable/flip_camera_icon"
+        android:padding="10dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/map"
+        android:onClick="switchCamerasPressed"/>
+
+    <ProgressBar
+        android:id="@+id/spinner"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"/>
+    <LinearLayout
+        android:id="@+id/notification_panel"
+        android:layout_margin="5dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+    <TextView
+        android:id="@+id/status_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <LinearLayout
+        android:id="@+id/doc_panel"
+        android:layout_margin="5dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</RelativeLayout>
