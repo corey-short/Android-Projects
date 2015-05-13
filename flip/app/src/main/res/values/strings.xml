@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">flip</string>
+
+    <string name="unknown_device">Unknown device</string>
+    <string name="action_settings">Settings</string>
+    <string name="ble_not_supported">Bluetooth Low Energy not supported on device</string>
+    <string name="title_activity_scan">ScanActivity</string>
+    <string name="title_activity_device_scan">DeviceScanActivity</string>
+    <string name="scan">Scan</string>
+    <string name="cancel">Cancel</string>
+    <string name="paired">paired</string>
+    <string name="explore">Explore</string>
+    <string name="title_activity_connect">Connect</string>
+
+    <string name="starfish_description">Did you know? Sea stars have no brains and no blood. Their nervous system is spread through their arms and their blood is actually filtered sea water.</string>
+    <string name="fish_description">Did you know? Male garibaldis are fiercely protective of their territories and they don\'t get sentimental after attracting a mate. As soon as a female has laid her eggs, the male chases her away before she has the chance to munch on any other eggs in his nest, then fertilizes the eggs .</string>
+    <string name="title_activity_about">AboutActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+
+</resources>
