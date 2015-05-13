@@ -2,6 +2,8 @@
 /local.properties
 /.idea/workspace.xml
 /.idea/libraries
+.idea/
+.idea_modules/
 .idea
 *.iml
 lib_managed
@@ -10,3 +12,7 @@ lib_managed
 *target/
 *.cache
 *.class
+*.swp
+*.pyc
+.project
+.classpath
