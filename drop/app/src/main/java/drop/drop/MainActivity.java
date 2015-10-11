@@ -120,9 +120,9 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback {
     protected void onResume() {
         super.onResume();
 
-        if(!loggedIn) {
+        /*if(!loggedIn) {
             launchLogin();
-        }
+        }*/
     }
 
     @Override
@@ -172,7 +172,8 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback {
     private void checkNotification() {
         final Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            if (extras.getString("dropKey") == null || extras.getString("id") == null ) return;
+            if (extras.getString("dropKey") == null) return;
+            if (extras.getString("id") == null) return;
 
             //TODO: Prevent picking up your own drop after it has been placed on the Map
             Toast.makeText(getApplicationContext(), "Picking up your drop...", Toast.LENGTH_SHORT).show();
@@ -183,12 +184,12 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback {
             String ns = Context.NOTIFICATION_SERVICE;
             NotificationManager nMgr = (NotificationManager) getApplicationContext().getSystemService(ns);
             nMgr.cancel(notifID);
-
             pickUpDrop(dropKey);
          }
     }
 
-    private void pushDropFoundNotification(Drop drop) { // Push a notification to the user notifying them of the drop they found
+    /* Push a notification to the user notifying them of the drop they found */
+    private void pushDropFoundNotification(Drop drop) {
         int marker_resource;
         if(drop.getPostIsPublic()) {
             marker_resource = R.drawable.public_drop_message;
@@ -206,12 +207,18 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback {
         Random r = new Random();
         int id = r.nextInt(1000); // make random id for notif
         resultIntent.putExtra("id", Integer.toString(id));
-        //toq1.sendNotification(this);
 
-        // The stack builder object will contain an artificial back stack for the
-        // started Activity.
-        // This ensures that navigating backward from the Activity leads out of
-        // your application to the Home screen.
+        /*
+         * The stack builder object will contain an artificial back stack for the
+         * started Activity.
+         *
+         * This ensures that navigating backward from the Activity leads out of
+         * your application and back across tasks.
+         *
+         * Using the back button to navigate back on Android 3.0+ ...
+         * not the best practice
+         */
+        // TODO: Look into this more. Why only here?
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
         // Adds the back stack for the Intent (but not the Intent itself)
         stackBuilder.addParentStack(MainActivity.class);
@@ -233,6 +240,7 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback {
     //*********************************************************************************************
     //  FIREBASE
     //*********************************************************************************************
+
     private void runFirebase() {
         Firebase.setAndroidContext(this);
         firebase = new Firebase("https://dropdatabase.firebaseio.com");
@@ -249,6 +257,7 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback {
         }, 1000);
     }
 
+    // TODO: How long is session authentification last
     private void runAuthenticationListener() {
         firebase.addAuthStateListener(new Firebase.AuthStateListener() {
             @Override
@@ -261,7 +270,7 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback {
                     editor.apply();
                 } else { // User is not logged in
                     loggedIn = false;
-                    launchLogin();
+                    //launchLogin();
                 }
             }
         });
@@ -280,19 +289,19 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback {
                 Map<String, Object> drop = (Map<String, Object>) snapshot.getValue();
                 // Save drops for use later
                 Drop dropObj = new Drop();
-                //dropObj.setKey(snapshot.getKey());
-                //dropObj.setLat((Double) drop.get("lat"));
-                //dropObj.setLon((Double) drop.get("lon"));
-                //dropObj.setPublic((Boolean) drop.get("public"));
-                //dropObj.setImageKey((String) drop.get("imageKey"));
+                dropObj.setKey(snapshot.getKey());
+                dropObj.setLat((Double) drop.get("lat"));
+                dropObj.setLon((Double) drop.get("lon"));
+                dropObj.setPublic((Boolean) drop.get("public"));
+                dropObj.setImageKey((String) drop.get("imageKey"));
 
-                //Object epoch = drop.get("epoch");
-                //dropObj.setEpoch((Long) epoch);
-                //dropObj.setDropperUID((String) drop.get("dropperUID"));
-                //if (!isDropInDrops(dropObj)) {
-                //    drops.add(dropObj);
-                //    addDropToMap(dropObj);
-                //}
+                Object epoch = drop.get("epoch");
+                dropObj.setEpoch((Long) epoch);
+                dropObj.setDropperUID((String) drop.get("dropperUID"));
+                if (!isDropInDrops(dropObj)) {
+                    drops.add(dropObj);
+                    addDropToMap(dropObj);
+                }
             }
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {}
@@ -336,11 +345,11 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback {
             public void onCancelled(FirebaseError firebaseError) {}
         });
     }
-
-    private void launchLogin() {
+    // TODO: maintain login session and keyboard auto down or position of password box on Fragment
+    /*private void launchLogin() {
         Intent intent = new Intent(this, Login.class);
         startActivity(intent);
-    }
+    }*/
 
     private void uploadDrop() {
         // Convert image to string
@@ -507,12 +516,7 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback {
                     zoomMapToLocation(location);
                 }
                 currentLocation = location;
-                checkForFoundDrop(currentLocation); //TODO implement this
-
-                // TODO Gunna want to move this somewhere else... Dont want to call every time
-
-                // make a call to handleNotification()
-                //toq.sendNotification(getApplicationContext());
+                checkForFoundDrop(currentLocation);
             }
             public void onStatusChanged(String provider, int status, Bundle extras) {}
             public void onProviderEnabled(String provider) {}
@@ -748,7 +752,7 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback {
         photo.startAnimation(animation);
 
         // Upload image to database in background
-        Toast.makeText(getApplicationContext(), "Droping...", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Dropping...", Toast.LENGTH_SHORT).show();
         new Thread(new Runnable() {
             public void run() {
                 uploadDrop();

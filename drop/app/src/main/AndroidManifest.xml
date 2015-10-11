@@ -19,7 +19,8 @@
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
-    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus" />
 
     <uses-feature
         android:glEsVersion="0x00020000"
@@ -40,13 +41,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <!-- Tag for Google Play Services v4.0+ -->
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+        <!-- Adds Google Maps API key to the app -->
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyAHkHepL6YQ-z3tIHqdj7Z-B3yWl3uS31M" />
+            android:value="AIzaSyD9MdjAqvGeDJxpky50seAuXwJ1pkvMzEw" />
 
         <activity
             android:name=".SignUp"
@@ -63,7 +65,7 @@
             android:name=".Login"
             android:label="@string/title_activity_login"
             android:noHistory="true"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".Friends"
@@ -84,17 +86,16 @@
         <activity
             android:name=".CollectedDrops"
             android:label="@string/title_activity_collected_drops"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
 
-
-        <receiver
+        <!-- <receiver
             android:name=".ToqBroadcastReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.qualcomm.toq.smartwatch.install.applet" />
             </intent-filter>
-        </receiver>
+        </receiver> -->
     </application>
 
 </manifest>
