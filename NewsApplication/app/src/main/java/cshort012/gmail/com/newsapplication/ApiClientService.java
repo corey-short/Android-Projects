@@ -8,11 +8,12 @@ import retrofit.http.GET;
 
 /**
  * Created by Short on 5/25/2015.
- * Creates a service from the New York Times Top Stories API.
+ * Creates a service from the New York Times Most Popular API.
  */
 public class ApiClientService {
     private static NewYorkTimesService newYorkTimesService;
-    private static final String API_URL = "http://api.nytimes.com/svc/topstories/v1/home.json?api-key=201f2d9fc5a0f555ac4ad2946c51950d:7:71840120";
+    //private static final String API_URL = "http://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/1.json?api-key=98301a99f20298a6a0d917da47ce5cab:18:72981922";
+    private static final String API_URL = "http://api.nytimes.com/svc/mostpopular/v2/mostviewed";
 
     public static NewYorkTimesService getNewYorkTimesService() {
         // Consume New York Times Top Stories API
@@ -28,7 +29,7 @@ public class ApiClientService {
 
     public interface NewYorkTimesService {
 
-        @GET("/path")
+        @GET("/all-sections/1.json?api-key=98301a99f20298a6a0d917da47ce5cab:18:72981922")
         //void getStories(@Query("limit") int limit, @Query("offset") int offset, Callback<List<StoryList>> callback);
         void getStoryList(Callback<List<StoryList>> callback);
     }
